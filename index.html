@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Tanya's Birthday</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+</head>
+<body>
+
+    <section>
+        <h2>Happy Birthday Tanya </h2>
+        <div class="banner">
+            <div class="blocks"></div>
+        </div>
+    </section>
+
+    
+    
+
+    <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const blocks = document.getElementsByClassName('blocks');
+        for (var i = 1; i < 400; i++){
+            banner.innerHTML += "<div class='blocks'></div>";
+            const duration = Math.random() * 5;
+            blocks[i].style.animationDuration = 2+ duration+'s';
+            blocks[i].style.animationDelay = duration+'s';
+        }
+
+
+        const section = document.querySelector('section');
+        setTimeout(function(){
+            section.classList.add('active')
+        },14000) //add class active after 14seconds
+    </script>
+</body>
+</html>
